@@ -5,7 +5,12 @@ public class HotSearch {
 
     private Integer num;
 
+    //购买的热搜位置
     private Integer rank;
+
+    //购买热搜的钱数
+    private Integer money;
+
 
     private boolean isBuyRank;
 
@@ -18,6 +23,14 @@ public class HotSearch {
         this.name = name;
         this.num = num;
         this.isSuperHotSearch = flag;
+    }
+
+    public Integer getMoney() {
+        return money;
+    }
+
+    public void setMoney(Integer money) {
+        this.money = money;
     }
 
     public Integer getRank() {

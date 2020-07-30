@@ -64,10 +64,16 @@ public class Main {
                     break;
                 case 3:
                     System.out.println("请输入需要购买的热搜:");
-                    String buy = scanner.nextLine();
+                    String buy = scanner.next();
                     System.out.println("请输入要购买的热搜排名");
                     int ranking = scanner.nextInt();
-                    rankingList.buyHot(buy, ranking);
+                    if(rankingList.getMap().containsKey(ranking)){
+                        System.out.println("请输入购买的钱数,需大于"+rankingList.getMap().get(ranking));
+                    }else{
+                        System.out.println("请输入购买的钱数");
+                    }
+                    int money = scanner.nextInt();
+                    rankingList.buyHot(buy, ranking,money);
                     System.out.println("购买成功");
                     break;
                 case 4:
